@@ -24,3 +24,9 @@ test('the product API returns the expected pricing contract', async ({ request }
     currency: 'USD',
   });
 });
+
+test('the product API returns 404 for an unknown product', async ({ request }) => {
+  const response = await request.get('/api/products/unknown-product');
+
+  expect(response.status()).toBe(404);
+});
