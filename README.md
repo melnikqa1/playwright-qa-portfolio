@@ -1,6 +1,6 @@
 # Playwright QA Portfolio
 
-Two Playwright checks written in TypeScript for a small e-commerce demo. The UI check verifies the cart count after adding a product. The API check verifies the response status, JSON content type, and pricing fields.
+Three Playwright checks written in TypeScript for a small e-commerce demo. The UI check verifies the cart count after adding a product. The API check verifies the response status, JSON content type, and pricing fields.
 
 ## Run locally
 
@@ -18,3 +18,4 @@ Playwright starts the demo server locally. The checks use fictional product data
 
 - **UI** verifies the customer-visible cart state through accessible locators.
 - **API** verifies the product ID, price in minor units, and currency.
+- **Missing product** verifies that the API returns HTTP 404 so clients can distinguish missing products from successful responses.
